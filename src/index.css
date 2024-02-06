@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --bg-color-dark: #0A092D;
+  --bg-color-light: #2E3856;
+  --bg-color-white:#F6F7FB;
+  --bg-color-gray:#b2b8c9;
+  --border-color:#2E3856;
+  --border-color-gray:#b2b8c9;
+  --hoverBg:#50576b;
+  --title-color: hsl(220, 8%, 10%);
+  --text-color-dark:#2E3856;
+  --text-color-gray:#b2b8c9;
+  --text-color-light:#F6F7FB;
+  --btn-bg-color:#423ED8;
+  --yellow-btn-bg:#eec635;
+  --body-color: hsl(220, 18%, 99%);
+  --container-color: hsl(220, 18%, 97%);
+
+  /* ======for active navs=== */
+  --active-nav-color:#888d99;
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Lora', serif;
+
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  --primary-border-color:
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  /* margin-right: 2.5rem;
+  margin-left: 2.5rem; */
+}
+/* :root {
+  background-color: #0A092D;
+  color: #2E3856;
+} */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  /* margin-right: 2.5rem;
+  margin-left: 2.5rem; */
+  padding: 0 4rem;
+  padding-top: 4.5rem;
+  /* display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh; */
+  background-color:var(--bg-color-white);
+}
+footer{
+  /* padding: 0 4rem; */
+  margin-bottom: 2rem;
+}
+.nav-link:hover{
+  color:var(--active-nav-color);
+  border-bottom: 4px solid var(--active-nav-color);
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  /* font-weight: 500; */
+  color: inherit;
+  text-decoration: none;
+}
+a:focus{
+  text-decoration: none;
+}
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
