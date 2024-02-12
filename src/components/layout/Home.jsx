@@ -1,3 +1,4 @@
+import AddQuiz from '../modals/AddQuiz'
 import Footer from './Footer'
 import Topnav from './Topnav'
 import { Outlet } from 'react-router-dom'
@@ -8,6 +9,8 @@ const Home = () => {
         <Topnav/>
         <Outlet/>
         <Footer/>
+        {/* =====modals======= */}
+        <AddQuiz/>
     </div>
   )
 }

@@ -5,6 +5,8 @@ import { FaRegFolder } from "react-icons/fa";
 import { IoAddSharp } from "react-icons/io5";
 import { NavLink, Outlet } from "react-router-dom";
 import { Tooltip, Whisper } from "rsuite";
+import { useContext } from "react";
+import { QuizContext } from "../../contexts/QuizContext";
 
 const dashboardNav = [
   {
@@ -20,6 +22,14 @@ const createFolderTip = <Tooltip arrow={false}>create folder</Tooltip>;
 const moreTip = <Tooltip arrow={false}>more</Tooltip>;
 
 const Dashboard = () => {
+  const { openModal, setOpenModal } = useContext(QuizContext);
+
+  const handleModalopen = () => {
+    setOpenModal((prev) => {
+      return { ...prev, open: true, modal: "Create Quiz" };
+    });
+  };
+
   return (
     <div className="px-4 py-2">
       <h2 className="flex items-center my-7 justify-start text-5xl font-bold text-textColor">
@@ -55,6 +65,7 @@ const Dashboard = () => {
           controlId="control-id-hover"
           trigger="hover"
           speaker={addSetTip}
+          onClick={handleModalopen}
         >
           <button className=" flex me-2 items-center justify-center rounded-full w-[45px] h-[45px] text-textColorLight border-primaryBorderColor border-4">
             <IoAddSharp
